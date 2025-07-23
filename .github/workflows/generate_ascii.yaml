@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
+      - name: Listing files
+        run: ls -altr
       - name: Executing script to install cowsay
         run: ./ascii.sh
       
