@@ -18,3 +18,5 @@ jobs:
         run: cat dragon.txt
       - name: checkout repo files
         run: ls -altr
+      - name: Reading README.md file
+        run: cat README.md
