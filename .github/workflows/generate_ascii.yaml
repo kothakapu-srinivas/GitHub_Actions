@@ -7,15 +7,32 @@ on:
   workflow_dispatch: 
 
 jobs:
-  ascii_job:
+  build_job_1:
+    name: Build Job 1
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-      - name: Listing files
-        run: ls -altr
-      - name: Executing script to install cowsay
-        run: |
-            chmod +x .github/workflows/ascii.sh
-            .github/workflows/ascii.sh
+    - name: Install cowsay program
+      run: sudo apt-get -y install cowsay
+    - name: Execute cowsay command
+      run: cowsay -f dragon "Run for ever as I'm DRAGON" >> dragon.txt
+    - name: Sleep for 30 seconds
+      run: sleep 30 
+
       
+   test_job_2:
+     name: Test Job 2
+     runs-on: ubuntu-latest
+     steps:
+     - name: Sleep for 10 seconds
+       run: sleep 10
+     - name: Test file exists or not
+       run: grep -i dragon dragon.txt
+
+   deploy_job_3:
+     name: Deploy Job 3
+     runs-on: ubuntu-latest
+     steps:
+     - name: Read file
+       run: cat dragon.txt
+     - name: Deploy
+       run: echo "Deploying .... "
