@@ -13,3 +13,7 @@ jobs:
         cat /etc/os-release
         ls -altr
         cat README.md
+
+    - name: Generate ASCII Artwork
+      run: cowsay -f dragon "Run for ever, I am a DRAGON" >> dragon.txt
+      
