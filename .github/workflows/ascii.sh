@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get -y install cowsay
-cowsay -f dragon "Follow the snake" >> dragon.txt
-grep -i dragon dragon.txt
-cat dragon.txt
+cowsay -f snake "Follow the snake" >> snake.txt
+grep -i snake snake.txt
+cat snake.txt
 ls -altr
