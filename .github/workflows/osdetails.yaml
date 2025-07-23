@@ -2,7 +2,7 @@ name: OS Details
 on: push
 jobs:
   os_details:
-    name: os_details
+    name: OS Details
     runs-on: ubuntu-latest
     steps:
     - name: checkout repo
@@ -10,3 +10,9 @@ jobs:
      
     - name: os-details
       run: cat /etc/os-release
+
+    - name: list files
+      run: ls
+
+    - name: Read file
+      run: cat README.md
