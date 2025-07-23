@@ -1,0 +1,7 @@
+name: OS Details
+on: push
+jobs:
+  os_details:
+    steps:
+    - name: os-details
+      run: cat /etc/os-release
