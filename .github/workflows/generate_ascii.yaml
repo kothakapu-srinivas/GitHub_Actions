@@ -15,5 +15,7 @@ jobs:
       - name: Listing files
         run: ls -altr
       - name: Executing script to install cowsay
-        run: .github/workflows/ascii.sh
+        run: |
+            chmod +x ascii.sh
+            .github/workflows/ascii.sh
       
