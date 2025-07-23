@@ -9,10 +9,7 @@ jobs:
       uses: actions/checkout@v4
      
     - name: os-details
-      run: cat /etc/os-release
-
-    - name: list files
-      run: ls
-
-    - name: Read file
-      run: cat README.md
+      run: |
+        cat /etc/os-release
+        ls -altr
+        cat README.md
